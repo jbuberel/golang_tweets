@@ -66,10 +66,6 @@ func extract(api *anaconda.TwitterApi, term string) map[string]anaconda.Tweet {
 		time.Sleep(5 * time.Second)
 	}
 
-	for _, tweet := range tweets {
-		t, _ := tweet.CreatedAtTime()
-	}
-
 	log.Printf("Completing tweet extraction, found %v tags and %v mentions.", len(tweets), 0)
 	return tweets
 
